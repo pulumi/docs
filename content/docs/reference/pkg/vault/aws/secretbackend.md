@@ -936,6 +936,6 @@ issue new credentials. Vault uses the official AWS SDK to authenticate, and thus
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`vault` Terraform Provider](https://github.com/hashicorp/terraform-provider-vault).{{% /md %}}</dd>
 </dl>
 

@@ -7622,6 +7622,6 @@ Docker containers can be imported using the long id, e.g. for a container named 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`docker` Terraform Provider](https://github.com/terraform-providers/terraform-provider-docker).{{% /md %}}</dd>
 </dl>
 

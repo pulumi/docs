@@ -1340,6 +1340,6 @@ X.509 Certificates for a User can be imported using project ID and username, in 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`mongodbatlas` Terraform Provider](https://github.com/mongodb/terraform-provider-mongodbatlas).{{% /md %}}</dd>
 </dl>
 

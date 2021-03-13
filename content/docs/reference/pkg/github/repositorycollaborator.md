@@ -895,6 +895,6 @@ GitHub Repository Collaborators can be imported using an ID made up of `reposito
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`github` Terraform Provider](https://github.com/terraform-providers/terraform-provider-github).{{% /md %}}</dd>
 </dl>
 

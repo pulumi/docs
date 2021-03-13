@@ -1009,6 +1009,6 @@ the share network.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`openstack` Terraform Provider](https://github.com/terraform-provider-openstack/terraform-provider-openstack).{{% /md %}}</dd>
 </dl>
 

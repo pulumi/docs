@@ -2760,6 +2760,6 @@ Clients can be imported using the format `{{realm_id}}/{{client_keycloak_id}}`, 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`keycloak` Terraform Provider](https://github.com/mrparkers/terraform-provider-keycloak).{{% /md %}}</dd>
 </dl>
 

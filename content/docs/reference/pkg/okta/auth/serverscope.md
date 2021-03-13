@@ -933,6 +933,6 @@ Okta Auth Server Scope can be imported via the Auth Server ID and Scope ID.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`okta` Terraform Provider](https://github.com/oktadeveloper/terraform-provider-okta).{{% /md %}}</dd>
 </dl>
 

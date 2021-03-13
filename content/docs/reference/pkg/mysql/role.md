@@ -551,6 +551,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`mysql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mysql).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`mysql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-mysql).{{% /md %}}</dd>
 </dl>
 

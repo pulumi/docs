@@ -46,7 +46,7 @@ A Pulumi package for creating and managing CloudAMQP resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>2.7.2</dd>
 </dl>

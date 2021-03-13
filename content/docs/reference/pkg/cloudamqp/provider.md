@@ -323,6 +323,6 @@ All [input](#inputs) properties are implicitly available as output properties. A
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`cloudamqp` Terraform Provider](https://github.com/cloudamqp/terraform-provider-cloudamqp).{{% /md %}}</dd>
 </dl>
 

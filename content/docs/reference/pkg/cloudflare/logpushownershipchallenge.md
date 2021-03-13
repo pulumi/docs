@@ -712,6 +712,6 @@ contains the contents required for Logpush Job creation.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).{{% /md %}}</dd>
 </dl>
 

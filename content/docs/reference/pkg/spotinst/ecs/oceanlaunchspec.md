@@ -2514,6 +2514,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/spotinst/terraform-provider-spotinst).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`spotinst` Terraform Provider](https://github.com/spotinst/terraform-provider-spotinst).{{% /md %}}</dd>
 </dl>
 

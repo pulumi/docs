@@ -708,6 +708,6 @@ A Fastly User can be imported using their user ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/fastly/terraform-provider-fastly).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`fastly` Terraform Provider](https://github.com/fastly/terraform-provider-fastly).{{% /md %}}</dd>
 </dl>
 

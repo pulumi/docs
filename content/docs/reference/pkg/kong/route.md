@@ -1320,6 +1320,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`kong` Terraform Provider](https://github.com/kevholditch/terraform-provider-kong).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`kong` Terraform Provider](https://github.com/kevholditch/terraform-provider-kong).{{% /md %}}</dd>
 </dl>
 

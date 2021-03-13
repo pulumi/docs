@@ -779,6 +779,6 @@ The following state arguments are supported:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`ns1` Terraform Provider](https://github.com/ns1-terraform/terraform-provider-ns1).{{% /md %}}</dd>
 </dl>
 

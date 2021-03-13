@@ -34,7 +34,7 @@ A Pulumi package for creating and managing RabbitMQ resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rabbitmq` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rabbitmq).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`rabbitmq` Terraform Provider](https://github.com/terraform-providers/terraform-provider-rabbitmq).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>2.5.1</dd>
 </dl>

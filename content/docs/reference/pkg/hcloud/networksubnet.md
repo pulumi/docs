@@ -939,6 +939,6 @@ Network Subnet entries can be imported using a compound ID with the following fo
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`hcloud` Terraform Provider](https://github.com/hetznercloud/terraform-provider-hcloud).{{% /md %}}</dd>
 </dl>
 

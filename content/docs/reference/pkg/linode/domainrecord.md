@@ -1324,6 +1324,6 @@ Linodes Domain Records can be imported using the Linode Domain `id` followed by 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).{{% /md %}}</dd>
 </dl>
 

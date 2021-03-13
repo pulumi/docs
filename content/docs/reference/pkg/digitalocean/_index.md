@@ -94,7 +94,7 @@ A Pulumi package for creating and managing Digital Ocean cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>3.5.2</dd>
 </dl>

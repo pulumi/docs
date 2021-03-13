@@ -856,6 +856,6 @@ function can be used to convert this base 10 number into other bases, such as he
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`tls` Terraform Provider](https://github.com/terraform-providers/terraform-provider-tls).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`tls` Terraform Provider](https://github.com/terraform-providers/terraform-provider-tls).{{% /md %}}</dd>
 </dl>
 

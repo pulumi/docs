@@ -47,7 +47,7 @@ A Pulumi package for creating and managing azuread cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuread` Terraform Provider](https://github.com/terraform-providers/terraform-provider-azuread).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>3.4.0</dd>
 </dl>

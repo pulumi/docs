@@ -2540,6 +2540,6 @@ Ruleset rules can be imported using using the related `ruleset` id and the `rule
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`pagerduty` Terraform Provider](https://github.com/terraform-providers/terraform-provider-pagerduty).{{% /md %}}</dd>
 </dl>
 

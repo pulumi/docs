@@ -417,6 +417,6 @@ The following output properties are available:
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`digitalocean` Terraform Provider](https://github.com/digitalocean/terraform-provider-digitalocean).{{% /md %}}</dd>
 </dl>
 

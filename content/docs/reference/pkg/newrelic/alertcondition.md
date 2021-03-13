@@ -2048,6 +2048,6 @@ Alert conditions can be imported using notation `alert_policy_id:alert_condition
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).{{% /md %}}</dd>
 </dl>
 

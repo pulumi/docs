@@ -1088,6 +1088,6 @@ DNSimple resources can be imported using their domain name and numeric ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/terraform-providers/terraform-provider-dnsimple).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`dnsimple` Terraform Provider](https://github.com/terraform-providers/terraform-provider-dnsimple).{{% /md %}}</dd>
 </dl>
 

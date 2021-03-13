@@ -841,6 +841,6 @@ Users can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`opsgenie` Terraform Provider](https://github.com/opsgenie/terraform-provider-opsgenie).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`opsgenie` Terraform Provider](https://github.com/opsgenie/terraform-provider-opsgenie).{{% /md %}}</dd>
 </dl>
 

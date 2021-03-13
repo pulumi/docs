@@ -925,6 +925,6 @@ The resources allows the import via the UUID of a user entitlement or by using t
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`azuredevops` Terraform Provider](https://github.com/microsoft/terraform-provider-azuredevops).{{% /md %}}</dd>
 </dl>
 

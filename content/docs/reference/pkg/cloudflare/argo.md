@@ -717,6 +717,6 @@ Argo settings can be imported the zone ID.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`cloudflare` Terraform Provider](https://github.com/cloudflare/terraform-provider-cloudflare).{{% /md %}}</dd>
 </dl>
 

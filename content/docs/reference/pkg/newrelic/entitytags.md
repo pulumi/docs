@@ -816,6 +816,6 @@ New Relic One entity tags can be imported using a concatenated string of the for
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`newrelic` Terraform Provider](https://github.com/newrelic/terraform-provider-newrelic).{{% /md %}}</dd>
 </dl>
 

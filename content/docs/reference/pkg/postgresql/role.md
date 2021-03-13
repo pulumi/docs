@@ -1976,6 +1976,6 @@ set to `infinity`.  Default is `NULL`, therefore `infinity`.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql).{{% /md %}}</dd>
 </dl>
 

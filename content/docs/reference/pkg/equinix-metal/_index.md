@@ -53,7 +53,7 @@ A Pulumi package for creating and managing equinix-metal cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`metal` Terraform Provider](https://github.com/equinix/terraform-provider-metal).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>1.1.2</dd>
 </dl>

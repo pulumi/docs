@@ -1157,6 +1157,6 @@ Azure Activity Log Cloud Integrations can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/vmware/terraform-provider-wavefront).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`wavefront` Terraform Provider](https://github.com/vmware/terraform-provider-wavefront).{{% /md %}}</dd>
 </dl>
 

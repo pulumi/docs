@@ -773,6 +773,6 @@ to control [cloud-init merging behavior](https://cloudinit.readthedocs.io/en/lat
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudinit` Terraform Provider](https://github.com/hashicorp/terraform-provider-cloudinit).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`cloudinit` Terraform Provider](https://github.com/hashicorp/terraform-provider-cloudinit).{{% /md %}}</dd>
 </dl>
 

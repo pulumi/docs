@@ -800,6 +800,6 @@ Topics can be imported using their ARN, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`kafka` Terraform Provider](https://github.com/Mongey/terraform-provider-kafka).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`kafka` Terraform Provider](https://github.com/Mongey/terraform-provider-kafka).{{% /md %}}</dd>
 </dl>
 

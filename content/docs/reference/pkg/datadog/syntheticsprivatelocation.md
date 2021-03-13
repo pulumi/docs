@@ -808,6 +808,6 @@ Synthetics private locations can be imported using their string ID, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`datadog` Terraform Provider](https://github.com/terraform-providers/terraform-provider-datadog).{{% /md %}}</dd>
 </dl>
 

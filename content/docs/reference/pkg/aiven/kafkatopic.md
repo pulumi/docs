@@ -2262,6 +2262,6 @@ created instead.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`aiven` Terraform Provider](https://github.com/aiven/terraform-provider-aiven).{{% /md %}}</dd>
 </dl>
 

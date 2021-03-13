@@ -9571,6 +9571,6 @@ Node Template can be imported using the Rancher Node Template ID
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`rancher2` Terraform Provider](https://github.com/rancher/terraform-provider-rancher2).{{% /md %}}</dd>
 </dl>
 

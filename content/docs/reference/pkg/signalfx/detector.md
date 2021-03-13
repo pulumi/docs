@@ -2720,6 +2720,6 @@ Detectors can be imported using their string ID (recoverable from URL`/#/detecto
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`signalfx` Terraform Provider](https://github.com/splunk-terraform/terraform-provider-signalfx).{{% /md %}}</dd>
 </dl>
 

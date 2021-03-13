@@ -33,7 +33,7 @@ A Pulumi package for creating and managing Kong resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`kong` Terraform Provider](https://github.com/kevholditch/terraform-provider-kong).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`kong` Terraform Provider](https://github.com/kevholditch/terraform-provider-kong).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>2.5.1</dd>
 </dl>

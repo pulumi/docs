@@ -857,6 +857,6 @@ GitLab group ldap links can be imported using an id made up of `ldap_provider:cn
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).{{% /md %}}</dd>
 </dl>
 

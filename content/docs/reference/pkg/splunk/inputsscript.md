@@ -1498,6 +1498,6 @@ Sets the sourcetype key initial value. The key is used during parsing/indexing, 
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).{{% /md %}}</dd>
 </dl>
 

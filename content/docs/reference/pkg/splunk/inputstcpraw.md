@@ -1762,6 +1762,6 @@ Defaults to audittrail (if signedaudit=true) or fschange (if signedaudit=false).
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`splunk` Terraform Provider](https://github.com/splunk/terraform-provider-splunk).{{% /md %}}</dd>
 </dl>
 

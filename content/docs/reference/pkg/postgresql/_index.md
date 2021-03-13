@@ -32,7 +32,7 @@ A Pulumi package for creating and managing postgresql cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`postgresql` Terraform Provider](https://github.com/terraform-providers/terraform-provider-postgresql).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>2.7.2</dd>
 </dl>

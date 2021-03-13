@@ -30,7 +30,7 @@ A Pulumi package for creating and managing cloudinit cloud resources.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`cloudinit` Terraform Provider](https://github.com/hashicorp/terraform-provider-cloudinit).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`cloudinit` Terraform Provider](https://github.com/hashicorp/terraform-provider-cloudinit).{{% /md %}}</dd>
 	<dt>Version</dt>
 	<dd>0.1.3</dd>
 </dl>

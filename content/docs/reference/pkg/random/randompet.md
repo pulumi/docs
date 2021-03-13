@@ -801,6 +801,6 @@ the main provider documentation for more information.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`random` Terraform Provider](https://github.com/terraform-providers/terraform-provider-random).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`random` Terraform Provider](https://github.com/terraform-providers/terraform-provider-random).{{% /md %}}</dd>
 </dl>
 

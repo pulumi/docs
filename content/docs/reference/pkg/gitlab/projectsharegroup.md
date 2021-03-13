@@ -717,6 +717,6 @@ GitLab project group shares can be imported using an id made up of `projectid:gr
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`gitlab` Terraform Provider](https://github.com/gitlabhq/terraform-provider-gitlab).{{% /md %}}</dd>
 </dl>
 

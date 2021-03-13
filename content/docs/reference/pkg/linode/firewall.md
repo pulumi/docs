@@ -1646,6 +1646,6 @@ Firewalls can be imported using the `id`, e.g.
 	<dt>License</dt>
 	<dd>Apache-2.0</dd>
 	<dt>Notes</dt>
-	<dd>This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).</dd>
+	<dd>{{% md %}}This Pulumi package is based on the [`linode` Terraform Provider](https://github.com/linode/terraform-provider-linode).{{% /md %}}</dd>
 </dl>
 
