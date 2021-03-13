@@ -30,7 +30,6 @@ timeout = 300000
 [outputs]
     home = ["HTML"]
     section = ["HTML"]
-    # taxonomy = ["HTML"]
 
 [taxonomies]
     author = "authors"
